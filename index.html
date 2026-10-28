@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorbulus — Главная страница</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="logo.png">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo-container">
+            <span class="logo">Sorbulus</span>
+            <img src="logo.png" alt="Логотип Sorbulus" class="nav-logo-img">
+        </div>
+        <nav class="nav-links">
+            <a href="#main">Главная</a>
+            <a href="community.html">Сообщество</a>
+        </nav>
+    </header>
+    <section id="main" class="hero">
+        <h1>Sorbulus</h1>
+        <p class="tagline">Песочница с внешним редактором карт без процедурной генерации мира</p>
+        <a href="#downloads" id="downloadBtn" class="btn-download">
+            Скачать Sorbulus
+        </a>
+    </section>
+    <section class="screenshots">
+        <h2>Скриншоты</h2>
+        <div class="gallery">
+            <img src="screenshot1.png" alt="Скриншот 1">
+            <img src="screenshot2.png" alt="Скриншот 2">
+            <img src="screenshot3.png" alt="Скриншот 3">
+        </div>
+    </section>
+    <section class="sys-reqs">
+        <h2>Системные требования</h2>
+        <div class="reqs-box">
+            <ul>
+                <li><strong>ОС:</strong> От Windows 7 до Windows 11 (64-бит)</li>
+                <li><strong>Процессор:</strong> Картошка</li>
+                <li><strong>Оперативная память:</strong> 2 ГБ ОЗУ, (Игра и редактор требуют всего 70 МБ ОЗУ)</li>
+                <li><strong>Место на диске:</strong> 80 МБ</li>
+            </ul>
+        </div>
+    </section>
+    <section id="downloads" class="downloads-section">
+        <h2>Скачать игру</h2>
+        <div class="downloads-box">
+            <div class="download-item">
+                <span class="version-tag">Версия 0.8 (Текущая!)</span>
+                <a href="Sorbulus_0.8.zip" class="btn-file-download" download>
+                    Скачать Sorbulus v0.8 (.zip)
+                </a>
+            </div>
+        </div>
+    </section>
+    <script>
+        const downloadBtn = document.getElementById('downloadBtn');
+        const downloadsBox = document.querySelector('.downloads-box');
+        downloadBtn.addEventListener('click', function() {
+            downloadsBox.classList.add('highlight');
+            setTimeout(function() {
+                downloadsBox.classList.remove('highlight');
+            }, 1200);
+        });
+    </script>
+</body>
+</html>
